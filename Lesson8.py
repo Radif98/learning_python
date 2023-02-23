@@ -82,4 +82,6 @@ with open('pipes.txt', 'r', encoding='utf-8') as file:
     data_list = file.read().splitlines()
     data_list = correct_list(data_list)
     num_pipes_list = creat_num_pipes_list(data_list)
-    print(find_time(data_list, num_pipes_list))
+    time = str(find_time(data_list, num_pipes_list))
+with open('time.txt', 'w', encoding='utf-8') as file:
+    file.write(time)
